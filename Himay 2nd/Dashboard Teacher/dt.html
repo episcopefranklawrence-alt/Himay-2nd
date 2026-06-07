@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDUGRAM — Teacher Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dt.css" />
+</head>
+<body>
+  <div id="teacher-screen" class="screen active">
+    
+    <aside class="sidebar" id="teacher-sidebar">
+      <div class="sidebar-brand">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="10" fill="#1a3a5c"/>
+          <path d="M8 26L18 10L28 26H8Z" fill="#c9a84c" opacity="0.9"/>
+          <path d="M13 26L18 17L23 26H13Z" fill="white" opacity="0.9"/>
+        </svg>
+        <span>EDUGRAM</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
+          Dashboard
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/></svg>
+          Create Assignment
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"/></svg>
+          Submissions
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+          My Assignments
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg>
+          People
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/></svg>
+          My Profile
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar teacher-avatar">P</div>
+          <div class="user-details">
+            <span class="user-name">Prof. Juan D...</span>
+            <span class="user-role">Instructor</span>
+          </div>
+        </div>
+        <button class="logout-btn">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="topbar">
+        <div class="topbar-left">
+          <h1 class="topbar-title">Dashboard</h1>
+        </div>
+        <div class="topbar-right">
+          <div class="lang-badge">GB English</div>
+          <div class="notification-btn">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+            <span class="notif-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel active">
+        <div class="panel-content">
+          
+          <div class="welcome-banner teacher-banner">
+            <div class="welcome-text">
+              <h2>Welcome, Prof. Juan 📚</h2>
+              <p>You have <strong>2</strong> submissions awaiting review.</p>
+            </div>
+            <div class="welcome-art">
+              <svg width="120" height="80" viewBox="0 0 120 80">
+                <ellipse cx="60" cy="70" rx="55" ry="8" fill="#1a3a5c" opacity="0.1"/>
+                <rect x="20" y="20" width="80" height="50" rx="4" fill="#1a3a5c"/>
+                <rect x="25" y="25" width="70" height="40" rx="2" fill="#f0f4f8"/>
+                <circle cx="75" cy="35" r="10" fill="#c9a84c"/>
+                <path d="M70 35l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <rect x="30" y="30" width="30" height="2" rx="1" fill="#1a3a5c" opacity="0.3"/>
+                <rect x="30" y="35" width="25" height="2" rx="1" fill="#1a3a5c" opacity="0.2"/>
+                <rect x="30" y="40" width="28" height="2" rx="1" fill="#1a3a5c" opacity="0.2"/>
+                <rect x="30" y="50" width="60" height="8" rx="2" fill="#1a3a5c" opacity="0.1"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-icon blue"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/></svg></div>
+              <div class="stat-info">
+                <span class="stat-num">12</span>
+                <span class="stat-label">Total Students</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon gold"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"/></svg></div>
+              <div class="stat-info">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Active Assignments</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon red"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg></div>
+              <div class="stat-info">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Pending Review</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon green"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div>
+              <div class="stat-info">
+                <span class="stat-num">1</span>
+                <span class="stat-label">Graded</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Recent Submissions</h3>
+              <a href="#" class="card-link">View all</a>
+            </div>
+            <div>
+              
+              <div class="submission-card">
+                <div class="submission-avatar">JR</div>
+                <div class="submission-info">
+                  <div class="submission-student">John Reyes</div>
+                  <div class="submission-assignment">Research Paper: Climate Change</div>
+                  <div class="submission-time">Submitted Jul 10, 07:20 PM · v1</div>
+                </div>
+                <div class="submission-actions">
+                  <button class="review-btn">Review</button>
+                </div>
+              </div>
+
+              <div class="submission-card">
+                <div class="submission-avatar">MS</div>
+                <div class="submission-info">
+                  <div class="submission-student">Maria Santos</div>
+                  <div class="submission-assignment">Book Report: To Kill a Mockingbird</div>
+                  <div class="submission-time">Submitted Jul 4, 10:32 PM · v2</div>
+                </div>
+                <div class="submission-actions">
+                  <span class="graded-badge">Graded · 92/100</span>
+                </div>
+              </div>
+
+              <div class="submission-card">
+                <div class="submission-avatar">MS</div>
+                <div class="submission-info">
+                  <div class="submission-student">Maria Santos</div>
+                  <div class="submission-assignment">Argumentative Essay: Technology in Education</div>
+                  <div class="submission-time">Submitted Jul 2, 12:45 AM · v1</div>
+                </div>
+                <div class="submission-actions">
+                  <button class="review-btn">Review</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <script src="dt.js"></script>
+</body>
+</html>
